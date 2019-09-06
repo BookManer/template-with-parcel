@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    background-color: lightgray
+}
+
+#app {
+    min-width: 620px;
+    background-color: white;
+    padding: 2rem
+}
+
+.task-list {
+    height: 220px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.input-task {
+    display: block;
+    width: 100%
+}
+
+.task-block {
+    position: relative;
+
+    transition: all .2s ease-in-out
+}
+.task-block.done {
+    background-color: lightgreen;
+    color:darkgreen;
+    text-decoration: line-through;
+}
+.task-block.animation-hide {
+    transition-duration: 1s;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    transform: translateX(100%);
+    opacity: 0
+}
+.task-block.animation-show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.icon-group {
+    width: fit-content;
+    float: right;
+    background-color: linen;
+    padding: .5rem;
+}
+
+.icon-group .icon {
+    cursor: pointer;
+}
+
+.icon.check {
+    margin-right: 1rem;
+    
+    color: green
+}
+
+.icon.close {
+    color: tomato
+}
